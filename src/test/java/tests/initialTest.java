@@ -21,14 +21,16 @@ public class initialTest {
         WebDriver navegador = new ChromeDriver();
 
         // Navegar até...
-        navegador.get("http://google.com.br");
+        navegador.get("http://recaptcha.angelomedeiros.surge.sh");
 
         // Escrever na pesquisa
-        navegador.findElement(By.id("lst-ib")).sendKeys("Angelo");
+//        navegador.findElement(By.id("lst-ib")).sendKeys("Angelo");
 
         // Clicar em pesquisar
-        WebElement botaoPesquisar = navegador.findElement(By.name("btnK"));
-        botaoPesquisar.click();
+//        WebElement botaoPesquisar = navegador.findElement(By.name("btnK"));
+//        botaoPesquisar.click();
+
+        navegador.findElement(By.xpath("//button[.='Submit']")).click();
 
         assertEquals(1,1);
     }
